@@ -28,7 +28,7 @@ int binarySearch(int a[], int item, int low, int high)
     return binarySearch(a, item, low, mid-1); 
 } 
   
-// Function to sort an array a[] of size 'n' 
+/* Function to sort an array a[] of size 'n' using divide and conquer approach */
 void insertionSort(int a[], int n) 
 { 
     int i, loc, j, k, selected; 
@@ -51,29 +51,29 @@ void insertionSort(int a[], int n)
     } 
 } 
 
-
-void insertSort(int arr[], int size)
+/* Function to sort an array a[] of size 'n' using Iterative approach  */
+void insertSort(int arr[], int n)
 {
 	int i, j;
 	int tmp;
 	
 	/* iterate from element i=1 to N-1 (last element) */
-	for(i = 1; i < size; i++)
+	for(i = 1; i < n; i++)
 	 for(j = i; j>=1; j--)
 	 {
 		if (a[j]<a[j-1])
 		{
-			tmp=a[j];
-			a[j]=a[j-1];
-			a[j-1]=tmp;
-        }
-            else
-                break;
+		  tmp=a[j];
+		  a[j]=a[j-1];
+		  a[j-1]=tmp;
+		}
+		else
+		   break;
 	 }
 
 }
 
-/* Recursive function to sort an array using insertion sort  */
+/* Function to sort an array a[] of size 'n' using Recurseive approach  */
 void insertionSortRecursive(int arr[], int n) 
 { 
     int j, tmp;
